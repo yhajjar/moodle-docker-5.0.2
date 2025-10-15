@@ -1,7 +1,6 @@
 services:
   moodle:
     image: derkora/moodle:latest
-    container_name: moodle
     ports:
       - "80:80"
     volumes:
@@ -20,7 +19,6 @@ services:
 
   moodle_db:
     image: mariadb:10.11
-    container_name: moodle_db
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=moodle
@@ -39,4 +37,4 @@ volumes:
 
 networks:
   moodle-network:
-    external: true
+    driver: bridge
