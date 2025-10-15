@@ -2,7 +2,7 @@ services:
   moodle:
     image: derkora/moodle:latest
     ports:
-      - "80:80"
+      - "8858:80"
     volumes:
       - moodledata:/var/www/moodledata
       - moodle_data:/var/www/html
