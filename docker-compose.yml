@@ -11,6 +11,8 @@ services:
       - MOODLE_DATABASE_NAME=moodle
       - MOODLE_DATABASE_USER=${MOODLE_DATABASE_USER}
       - MOODLE_DATABASE_PASSWORD=${MOODLE_DATABASE_PASSWORD}
+      - PHP_UPLOAD_MAX_FILESIZE=30M
+      - PHP_POST_MAX_SIZE=30M
     depends_on:
       - moodle_db
     restart: always 
