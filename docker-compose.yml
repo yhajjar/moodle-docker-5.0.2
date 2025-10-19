@@ -6,6 +6,7 @@ services:
     volumes:
       - moodledata:/var/www/moodledata
       - moodle_data:/var/www/html
+      - ./php-conf/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro
     environment:
       - MOODLE_DATABASE_HOST=moodle_db
       - MOODLE_DATABASE_NAME=moodle
